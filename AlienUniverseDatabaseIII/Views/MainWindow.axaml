@@ -1,0 +1,66 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AlienUniverseDatabaseIII.ViewModels"
+        x:Class="AlienUniverseDatabaseIII.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Title="AlienUniverseDatabaseIII"
+        Icon="/Assets/avalonia-logo.ico"
+        Width="1000" 
+        Height="500"
+        >
+    
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
+
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
+                <TextBlock Margin="0 20 0 20" Text="Baza obcych filmów" FontSize="40" FontWeight="Medium"/>
+                
+                <Grid HorizontalAlignment="Center" Margin="5" ShowGridLines="True">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0" Grid.Row="0" Margin="10" Text="Wybierz film z listy:"/>
+
+                    <ListBox Grid.Column="0" Grid.Row="1"
+                             ItemsSource="{Binding Films}"
+                             SelectedItem="{Binding SelectedFilm}"
+                             >
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding TytulOryginalny}"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+
+                    <Button Grid.Column="1" Grid.Row="0" Content="Usuń wybrany"/>
+
+                    <TextBlock Grid.Column="2" Grid.Row="0" Margin="10" Text="Dodaj nowy film:"/>
+                </Grid>
+            </StackPanel>
+            
+            
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="40 70 0 0">
+                <TextBlock Margin="0 20 0 20" Text="Opis:" FontSize="30"/>
+
+                
+                
+                <Button Content="Pokaż bohaterów"/>
+            </StackPanel>
+            
+            
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="40 70 0 0">
+                <TextBlock Margin="0 20 0 20" Text="Bohaterowie:" FontSize="30"/>
+
+            </StackPanel>
+
+        </StackPanel>
+    </ScrollViewer>
+</Window>
