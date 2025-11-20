@@ -5,17 +5,16 @@
         x:DataType="vm:MainWindowViewModel"
         Title="AlienUniverseDatabaseIII"
         Icon="/Assets/avalonia-logo.ico"
-        Width="1000" 
-        Height="500"
+        Width="1200" 
+        Height="600"
         >
-    
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
 
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
                 <TextBlock Margin="0 20 0 20" Text="Baza obcych filmów" FontSize="40" FontWeight="Medium"/>
                 
-                <Grid HorizontalAlignment="Center" Margin="5" ShowGridLines="True">
+                <Grid HorizontalAlignment="Center" Margin="5" ShowGridLines="False">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
@@ -26,7 +25,7 @@
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Grid.Column="0" Grid.Row="0" Margin="10" Text="Wybierz film z listy:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="0" Text="Wybierz z listy:" FontSize="30"/>
 
                     <ListBox Grid.Column="0" Grid.Row="1"
                              ItemsSource="{Binding Films}"
@@ -38,26 +37,78 @@
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
-
-
-                    <Button Grid.Column="1" Grid.Row="0" Content="Usuń wybrany"/>
-
-                    <TextBlock Grid.Column="2" Grid.Row="0" Margin="10" Text="Dodaj nowy film:"/>
+                    
+                    <TextBlock Grid.Column="1" Grid.Row="0" Margin="10" Text="Dodaj nowy film:"/>
+                    
+                    <Button Grid.Column="2" Grid.Row="0" Content="Usuń wybrany"/>
                 </Grid>
             </StackPanel>
             
             
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="40 70 0 0">
-                <TextBlock Margin="0 20 0 20" Text="Opis:" FontSize="30"/>
+                <TextBlock Margin="0 25 0 0" Text="Opis:" FontSize="30"/>
+
+                <Grid HorizontalAlignment="Left" Margin="0 20 0 0" ShowGridLines="False">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Tytuł oryginalny:" FontWeight="Bold" Margin="0 5 10 5"/>
+                    <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding SelectedFilm.TytulOryginalny}"/>
+
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Tytuł polski:" FontWeight="Bold" Margin="0 5 10 5"/>
+                    <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding SelectedFilm.TytulPolski}"/>
+
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="Rok premiery:" FontWeight="Bold" Margin="0 5 10 5"/>
+                    <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding SelectedFilm.RokPremiery}"/>
+
+                    <TextBlock Grid.Row="3" Grid.Column="0" Text="Reżyser:" FontWeight="Bold" Margin="0 5 10 5"/>
+                    <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding SelectedFilm.Rezyser}"/>
+
+                    <TextBlock Grid.Row="4" Grid.Column="0" Text="Scenariusz:" FontWeight="Bold" Margin="0 5 10 5"/>
+                    <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding SelectedFilm.Scenariusz}"/>
+
+                    <TextBlock Grid.Row="5" Grid.Column="0" Text="Gatunek:" FontWeight="Bold" Margin="0 5 10 5"/>
+                    <TextBlock Grid.Row="5" Grid.Column="1" Text="{Binding SelectedFilm.Gatunek}"/>
+
+                    <TextBlock Grid.Row="6" Grid.Column="0" Text="Czas trwania:" FontWeight="Bold" Margin="0 5 10 5"/>
+                    <TextBlock Grid.Row="6" Grid.Column="1" Text="{Binding SelectedFilm.CzasTrwania}"/>
+
+                    <TextBlock Grid.Row="7" Grid.Column="0" Text="Ocena:" FontWeight="Bold" Margin="0 5 10 5"/>
+                    <TextBlock Grid.Row="7" Grid.Column="1" Text="{Binding SelectedFilm.Ocena}"/>
+
+                    <TextBlock Grid.Row="8" Grid.Column="0" Text="Statek:" FontWeight="Bold" Margin="0 5 10 5"/>
+                    <TextBlock Grid.Row="8" Grid.Column="1" Text="{Binding SelectedFilm.Statek}"/>
+
+                    <TextBlock Grid.Row="9" Grid.Column="0" Text="Opis fabuły:" FontWeight="Bold" Margin="0 5 10 5"/>
+                    <TextBlock Grid.Row="9" Grid.Column="1" Text="{Binding SelectedFilm.OpisFabuly}" TextWrapping="Wrap"/>
+
+                    <TextBlock Grid.Row="10" Grid.Column="0" Text="Ciekawostka:" FontWeight="Bold" Margin="0 5 10 5"/>
+                    <TextBlock Grid.Row="10" Grid.Column="1" Text="{Binding SelectedFilm.Ciekawostka}" TextWrapping="Wrap"/>
+                </Grid>
 
                 
-                
-                <Button Content="Pokaż bohaterów"/>
+                <Button Content="Pokaż bohaterów" Margin="0 20 0 0"/>
             </StackPanel>
             
             
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="40 70 0 0">
-                <TextBlock Margin="0 20 0 20" Text="Bohaterowie:" FontSize="30"/>
+                <TextBlock Margin="0 25 0 20" Text="Bohaterowie:" FontSize="30"/>
 
             </StackPanel>
 
