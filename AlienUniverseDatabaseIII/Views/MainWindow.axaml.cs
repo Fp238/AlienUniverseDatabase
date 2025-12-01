@@ -1,13 +1,15 @@
 using Avalonia.Controls;
 using AlienUniverseDatabaseIII.ViewModels;
 
-namespace AlienUniverseDatabaseIII.Views;
-
-public partial class MainWindow : Window
+namespace AlienUniverseDatabaseIII.Views
 {
-    public MainWindow()
+    public partial class MainWindow : Window
     {
-        InitializeComponent();
-        DataContext = new MainWindowViewModel();
+        public MainWindow()
+        {
+            InitializeComponent();
+
+            DataContext = new MainWindowViewModel();
+        }
     }
 }

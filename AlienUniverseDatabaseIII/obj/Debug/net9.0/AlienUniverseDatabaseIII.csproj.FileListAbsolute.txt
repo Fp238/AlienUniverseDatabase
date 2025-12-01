@@ -71,3 +71,4 @@ C:\Users\Admin\RiderProjects\AlienUniverseDatabaseIII\AlienUniverseDatabaseIII\o
 C:\Users\Admin\RiderProjects\AlienUniverseDatabaseIII\AlienUniverseDatabaseIII\obj\Debug\net9.0\ref\AlienUniverseDatabaseIII.dll
 C:\Users\Admin\RiderProjects\AlienUniverseDatabaseIII\AlienUniverseDatabaseIII\bin\Debug\net9.0\Assets\films.txt
 C:\Users\Admin\RiderProjects\AlienUniverseDatabaseIII\AlienUniverseDatabaseIII\obj\Debug\net9.0\AlienUniverseDatabaseIII.sourcelink.json
+C:\Users\Admin\RiderProjects\AlienUniverseDatabaseIII\AlienUniverseDatabaseIII\bin\Debug\net9.0\Assets\characters.txt

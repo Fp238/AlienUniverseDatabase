@@ -29,5 +29,8 @@
         <Content Include="Assets\films.txt">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
+        <Content Include="Assets\characters.txt">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
     </ItemGroup>
 </Project>
