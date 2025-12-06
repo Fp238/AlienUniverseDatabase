@@ -38,11 +38,34 @@ namespace AlienUniverseDatabaseIII.ViewModels
 
         public ObservableCollection<string> Races { get; } = new() { "Wszystkie rasy" };
 
+        private string _newFilmTitle = "";
+        public string NewFilmTitle
+        {
+            get => _newFilmTitle;
+            set => this.RaiseAndSetIfChanged(ref _newFilmTitle, value);
+        }
+
+        private string _newFilmGenre = "";
+        public string NewFilmGenre
+        {
+            get => _newFilmGenre;
+            set => this.RaiseAndSetIfChanged(ref _newFilmGenre, value);
+        }
+
+        private int _newFilmYear;
+        public int NewFilmYear
+        {
+            get => _newFilmYear;
+            set => this.RaiseAndSetIfChanged(ref _newFilmYear, value);
+        }
+
         public ReactiveCommand<Unit, Unit> ShowCharactersCommand { get; }
+        public ReactiveCommand<Unit, Unit> AddFilmCommand { get; }
 
         public MainWindowViewModel()
         {
             ShowCharactersCommand = ReactiveCommand.Create(UpdateFilteredCharacters);
+            AddFilmCommand = ReactiveCommand.Create(AddFilm);
 
             LoadFilms();
             LoadCharacters();
@@ -52,15 +75,9 @@ namespace AlienUniverseDatabaseIII.ViewModels
         private void LoadFilms()
         {
             var path = Path.Combine(AppContext.BaseDirectory, "Assets", "films.txt");
-
-            if (!File.Exists(path))
-            {
-                Console.WriteLine($"Plik nie znaleziony: {path}");
-                return;
-            }
+            if (!File.Exists(path)) return;
 
             var loaded = FilmLoader.LoadFromFile(path);
-
             foreach (var film in loaded)
                 Films.Add(film);
         }
@@ -68,15 +85,9 @@ namespace AlienUniverseDatabaseIII.ViewModels
         private void LoadCharacters()
         {
             var path = Path.Combine(AppContext.BaseDirectory, "Assets", "characters.txt");
-
-            if (!File.Exists(path))
-            {
-                Console.WriteLine($"Plik nie znaleziony: {path}");
-                return;
-            }
+            if (!File.Exists(path)) return;
 
             var loaded = CharacterLoader.LoadFromFile(path);
-
             foreach (var character in loaded)
                 Characters.Add(character);
         }
@@ -106,6 +117,25 @@ namespace AlienUniverseDatabaseIII.ViewModels
 
             foreach (var c in filtered)
                 FilteredCharacters.Add(c);
+        }
+
+        private void AddFilm()
+        {
+            if (string.IsNullOrWhiteSpace(NewFilmTitle))
+                return;
+
+            var film = new Film
+            {
+                TytulOryginalny = NewFilmTitle,
+                RokPremiery = NewFilmYear,
+                Gatunek = NewFilmGenre
+            };
+
+            Films.Add(film);
+
+            NewFilmTitle = "";
+            NewFilmGenre = "";
+            NewFilmYear = 0;
         }
     }
 }
