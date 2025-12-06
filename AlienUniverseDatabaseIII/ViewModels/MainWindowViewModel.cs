@@ -61,11 +61,13 @@ namespace AlienUniverseDatabaseIII.ViewModels
 
         public ReactiveCommand<Unit, Unit> ShowCharactersCommand { get; }
         public ReactiveCommand<Unit, Unit> AddFilmCommand { get; }
+        public ReactiveCommand<Unit, Unit> DeleteFilmCommand { get; }
 
         public MainWindowViewModel()
         {
             ShowCharactersCommand = ReactiveCommand.Create(UpdateFilteredCharacters);
             AddFilmCommand = ReactiveCommand.Create(AddFilm);
+            DeleteFilmCommand = ReactiveCommand.Create(DeleteSelectedFilm);
 
             LoadFilms();
             LoadCharacters();
@@ -136,6 +138,19 @@ namespace AlienUniverseDatabaseIII.ViewModels
             NewFilmTitle = "";
             NewFilmGenre = "";
             NewFilmYear = 0;
+        }
+
+        private void DeleteSelectedFilm()
+        {
+            if (SelectedFilm == null)
+                return;
+
+            var toRemove = SelectedFilm;
+
+            Films.Remove(toRemove);
+
+            SelectedFilm = null;
+            FilteredCharacters.Clear();
         }
     }
 }

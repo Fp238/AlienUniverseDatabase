@@ -62,7 +62,7 @@
                         <Button Grid.Column="0" Grid.Row="3" Content="Zapisz" Margin="5" Command="{Binding AddFilmCommand}"/>
                     </Grid>
                     
-                    <Button Grid.Column="2" Grid.Row="0" Content="Usuń wybrany" Margin="0 0 20 0"/>
+                    <Button Grid.Column="2" Grid.Row="0" Content="Usuń wybrany" Margin="0 0 20 0" Command="{Binding DeleteFilmCommand}"/>
                 </Grid>
             </StackPanel>
             
