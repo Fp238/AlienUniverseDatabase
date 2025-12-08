@@ -33,7 +33,11 @@ namespace AlienUniverseDatabaseIII.ViewModels
         public string SelectedRace
         {
             get => _selectedRace;
-            set => this.RaiseAndSetIfChanged(ref _selectedRace, value);
+            set
+            {
+                this.RaiseAndSetIfChanged(ref _selectedRace, value);
+                UpdateFilteredCharacters();
+            }
         }
 
         public ObservableCollection<string> Races { get; } = new() { "Wszystkie rasy" };
