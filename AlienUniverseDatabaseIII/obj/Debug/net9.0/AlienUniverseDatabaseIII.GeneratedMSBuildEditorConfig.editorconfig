@@ -15,14 +15,14 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AlienUniverseDatabaseIII
-build_property.ProjectDir = C:\Users\Admin\RiderProjects\AlienUniverseDatabaseIII\AlienUniverseDatabaseIII\
+build_property.ProjectDir = /home/filip/RiderProjects/AlienUniverseDatabaseIII/AlienUniverseDatabaseIII/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Admin/RiderProjects/AlienUniverseDatabaseIII/AlienUniverseDatabaseIII/App.axaml]
+[/home/filip/RiderProjects/AlienUniverseDatabaseIII/AlienUniverseDatabaseIII/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/Admin/RiderProjects/AlienUniverseDatabaseIII/AlienUniverseDatabaseIII/Views/MainWindow.axaml]
+[/home/filip/RiderProjects/AlienUniverseDatabaseIII/AlienUniverseDatabaseIII/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

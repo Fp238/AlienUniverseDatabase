@@ -29,7 +29,9 @@
 
                     <ListBox Grid.Column="0" Grid.Row="1"
                              ItemsSource="{Binding Films}"
-                             SelectedItem="{Binding SelectedFilm}">
+                             SelectedItem="{Binding SelectedFilm}"
+                             Background="MidnightBlue"
+                             >
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding TytulOryginalny}"/>
@@ -51,18 +53,18 @@
                         </Grid.ColumnDefinitions>
                         
                         <TextBlock Grid.Column="0" Grid.Row="0" Text="Tytuł filmu:" FontSize="15" Margin="10 5"/>
-                        <TextBox Grid.Column="1" Grid.Row="0" Width="150" Height="20" Text="{Binding NewFilmTitle}"/>
+                        <TextBox Grid.Column="1" Grid.Row="0" Width="150" Height="20" Text="{Binding NewFilmTitle}" BorderBrush="MidnightBlue"/>
                         
                         <TextBlock Grid.Column="0" Grid.Row="1" Text="Rok premiery:" FontSize="15" Margin="10 5"/>
-                        <TextBox Grid.Column="1" Grid.Row="1" Width="150" Height="20" Text="{Binding NewFilmYear}"/>
+                        <TextBox Grid.Column="1" Grid.Row="1" Width="150" Height="20" Text="{Binding NewFilmYear}" BorderBrush="MidnightBlue"/>
                         
                         <TextBlock Grid.Column="0" Grid.Row="2" Text="Gatunek:" FontSize="15" Margin="10 5"/>
-                        <TextBox Grid.Column="1" Grid.Row="2" Width="150" Height="20" Text="{Binding NewFilmGenre}"/>
+                        <TextBox Grid.Column="1" Grid.Row="2" Width="150" Height="20" Text="{Binding NewFilmGenre}" BorderBrush="MidnightBlue"/>
                         
-                        <Button Grid.Column="0" Grid.Row="3" Content="Zapisz" Margin="5" Command="{Binding AddFilmCommand}"/>
+                        <Button Grid.Column="0" Grid.Row="3" Content="Zapisz" Margin="5" Command="{Binding AddFilmCommand}" Background="MidnightBlue"/>
                     </Grid>
                     
-                    <Button Grid.Column="2" Grid.Row="0" Content="Usuń wybrany" Margin="0 0 20 0" Command="{Binding DeleteFilmCommand}"/>
+                    <Button Grid.Column="2" Grid.Row="0" Content="Usuń wybrany" Margin="0 0 20 0" Command="{Binding DeleteFilmCommand}" Background="MidnightBlue"/>
                 </Grid>
             </StackPanel>
             
@@ -123,7 +125,7 @@
                     <TextBlock Grid.Row="10" Grid.Column="1" Text="{Binding SelectedFilm.Ciekawostka}" TextWrapping="Wrap"/>
                 </Grid>
 
-                <Button Content="Pokaż bohaterów" Margin="0 20 0 0" Command="{Binding ShowCharactersCommand}"/>
+                <Button Content="Pokaż bohaterów" Margin="0 20 0 0" Command="{Binding ShowCharactersCommand}" Background="MidnightBlue"/>
 
             </StackPanel>
             
@@ -134,12 +136,15 @@
                           SelectedItem="{Binding SelectedRace}" 
                           Width="200" 
                           Margin="0 0 0 10"
+                          BorderBrush="MidnightBlue"
                           />
 
                 <ListBox ItemsSource="{Binding FilteredCharacters}"
                          SelectedItem="{Binding SelectedCharacter}"
-                         Width="250"
-                         Height="300">
+                         Width="200"
+                         Height="250"
+                         Background="MidnightBlue"
+                         >
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding Name}"/>

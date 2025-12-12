@@ -1722,24 +1722,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "/home/filip/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\RiderProjects\\AlienUniverseDatabaseIII\\AlienUniverseDatabaseIII\\AlienUniverseDatabaseIII.csproj",
+      "projectUniqueName": "/home/filip/RiderProjects/AlienUniverseDatabaseIII/AlienUniverseDatabaseIII/AlienUniverseDatabaseIII.csproj",
       "projectName": "AlienUniverseDatabaseIII",
-      "projectPath": "C:\\Users\\Admin\\RiderProjects\\AlienUniverseDatabaseIII\\AlienUniverseDatabaseIII\\AlienUniverseDatabaseIII.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\RiderProjects\\AlienUniverseDatabaseIII\\AlienUniverseDatabaseIII\\obj\\",
+      "projectPath": "/home/filip/RiderProjects/AlienUniverseDatabaseIII/AlienUniverseDatabaseIII/AlienUniverseDatabaseIII.csproj",
+      "packagesPath": "/home/filip/.nuget/packages/",
+      "outputPath": "/home/filip/RiderProjects/AlienUniverseDatabaseIII/AlienUniverseDatabaseIII/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/filip/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
+        "/usr/lib/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1758,7 +1759,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net9.0": {
@@ -1805,7 +1806,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Admin\\.dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.112/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
